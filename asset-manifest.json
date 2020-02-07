@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/start-wars/static/css/main.ac544b26.chunk.css",
+    "main.js": "/start-wars/static/js/main.49d337f9.chunk.js",
+    "main.js.map": "/start-wars/static/js/main.49d337f9.chunk.js.map",
+    "runtime-main.js": "/start-wars/static/js/runtime-main.6047ff9b.js",
+    "runtime-main.js.map": "/start-wars/static/js/runtime-main.6047ff9b.js.map",
+    "static/js/2.8a40dbbb.chunk.js": "/start-wars/static/js/2.8a40dbbb.chunk.js",
+    "static/js/2.8a40dbbb.chunk.js.map": "/start-wars/static/js/2.8a40dbbb.chunk.js.map",
+    "index.html": "/start-wars/index.html",
+    "precache-manifest.20a01203a96fd474589392358d5b0af4.js": "/start-wars/precache-manifest.20a01203a96fd474589392358d5b0af4.js",
+    "service-worker.js": "/start-wars/service-worker.js",
+    "static/css/main.ac544b26.chunk.css.map": "/start-wars/static/css/main.ac544b26.chunk.css.map",
+    "static/js/2.8a40dbbb.chunk.js.LICENSE.txt": "/start-wars/static/js/2.8a40dbbb.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6047ff9b.js",
+    "static/js/2.8a40dbbb.chunk.js",
+    "static/css/main.ac544b26.chunk.css",
+    "static/js/main.49d337f9.chunk.js"
+  ]
+}
