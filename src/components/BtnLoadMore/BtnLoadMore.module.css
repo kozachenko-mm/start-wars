@@ -1,0 +1,13 @@
+.button {
+    width: 240px;
+    border: 0;
+    padding: 8px 16px;
+    margin: 0 auto;
+    border-radius: 3px;
+    background-color: #3884ff;
+    transition: all 200ms ease;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+  }
