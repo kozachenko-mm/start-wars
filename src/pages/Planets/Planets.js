@@ -4,6 +4,8 @@ import * as Api from "../../services/api";
 import { Link } from "react-router-dom";
 import Search from "../../components/Search/Search";
 import BtnLoadMore from "../../components/BtnLoadMore/BtnLoadMore";
+import style from './Planets.module.css'
+
 
 export default class Planets extends Component {
   state = {
@@ -66,10 +68,10 @@ export default class Planets extends Component {
         {isLoading && (
           <Loader type="ThreeDots" color="#00BFFF" height={50} width={50} />
         )}
-        <ul>
+        <ul className={style.list}>
           {planets.length > 0 &&
             planets.map(item => (
-              <li key={item.created}>
+              <li className={style.item} key={item.created}>
                 <Link
                   to={{
                     pathname: `/planets/${item.url.split("/").reverse()[1]}`

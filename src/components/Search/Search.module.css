@@ -1,10 +1,11 @@
 input {
+  margin: 0 auto;
     font-size: 16px;
     padding: 10px;
     display: block;
-    width: 300px;
+    width: 700px;
     border: none;
-    border: 1px solid #ccc;
+    border: 2px solid rgb(197, 226, 245);
   }
   
   input:focus {

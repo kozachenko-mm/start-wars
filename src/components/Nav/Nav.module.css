@@ -1,0 +1,27 @@
+.nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: #9bd5f7;
+    margin-bottom: 20px;
+}
+.list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item {
+    padding: 5px 10px;
+    font-size: 20px;
+}
+
+.link {
+    color: rgb(41, 27, 24);
+    padding: 0px 20px;
+    text-decoration: none;
+  }
+  
+  .activeLink {
+    color: rgb(22, 6, 168);
+  }
+

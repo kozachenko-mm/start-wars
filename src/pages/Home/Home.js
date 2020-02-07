@@ -1,11 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import style from './Home.module.css'
 
 const Home = () => {
   return (
-    <main>
-      <h1>Star Wars</h1>
-      <p>
+    <main className={style.main}>
+      <h1 className={style.title}>Star Wars</h1>
+      <p className={style.text}>
         All the Star Wars data you've ever wanted:
         <Link to="/planets"> Planets</Link>,{" "}
         <Link to="/species">Species</Link>,{" "}

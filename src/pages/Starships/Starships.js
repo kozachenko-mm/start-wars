@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import Search from "../../components/Search/Search";
 import * as Api from "../../services/api";
 import BtnLoadMore from "../../components/BtnLoadMore/BtnLoadMore";
+import style from './Starships.module.css'
 
 
 export default class Starships extends Component {
@@ -71,10 +72,10 @@ export default class Starships extends Component {
         {isLoading && (
           <Loader type="ThreeDots" color="#00BFFF" height={50} width={50} />
         )}
-        <ul>
+        <ul className={style.list}>
           {starships.length > 0 &&
             starships.map(item => (
-              <li key={item.created}>
+              <li className={style.item} key={item.created}>
                 <Link
                   to={{
                     pathname: `/starships/${item.url.split("/").reverse()[1]}`

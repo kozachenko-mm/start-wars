@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import * as Api from "../../services/api";
 import Search from "../../components/Search/Search";
 import BtnLoadMore from "../../components/BtnLoadMore/BtnLoadMore";
+import style from './Vehicles.module.css'
 
 export default class Vehicles extends Component {
   state = {
@@ -68,10 +69,10 @@ export default class Vehicles extends Component {
         {isLoading && (
           <Loader type="ThreeDots" color="#00BFFF" height={50} width={50} />
         )}
-        <ul>
+        <ul className={style.list}>
           {vehicles.length > 0 &&
             vehicles.map(item => (
-              <li key={item.created}>
+              <li className={style.item} key={item.created}>
                 <Link
                   to={{
                     pathname: `/vehicles/${item.url.split("/").reverse()[1]}`

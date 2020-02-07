@@ -4,6 +4,9 @@ import { Link } from "react-router-dom";
 import * as Api from "../../services/api";
 import Search from "../../components/Search/Search";
 import BtnLoadMore from "../../components/BtnLoadMore/BtnLoadMore";
+import style from './Species.module.css'
+
+
 
 export default class Species extends Component {
   state = {
@@ -69,10 +72,10 @@ export default class Species extends Component {
         {isLoading && (
           <Loader type="ThreeDots" color="#00BFFF" height={50} width={50} />
         )}
-        <ul>
+        <ul className={style.list}>
           {species.length > 0 &&
             species.map(item => (
-              <li key={item.created}>
+              <li className={style.item} key={item.created}>
                 <Link
                   to={{
                     pathname: `/species/${item.url.split("/").reverse()[1]}`
