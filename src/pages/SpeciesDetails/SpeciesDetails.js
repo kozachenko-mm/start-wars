@@ -1,8 +1,10 @@
-import React, { Component } from "react";
-import Loader from "react-loader-spinner";
-import * as Api from "../../services/api";
-import { getIdFromProps } from "../../services/getIdFromProps";
-import DataList from "../../components/DataList/DataList";
+/* eslint-disable react/no-access-state-in-setstate */
+/* eslint-disable react/destructuring-assignment */
+import React, { Component } from 'react';
+import Loader from 'react-loader-spinner';
+import * as Api from '../../services/api';
+import { getIdFromProps } from '../../services/getIdFromProps';
+import DataList from '../../components/DataList/DataList';
 
 export default class SpeciesDetails extends Component {
   state = {
@@ -11,7 +13,7 @@ export default class SpeciesDetails extends Component {
     isLoading: false,
     characters: [],
     films: [],
-    homeworld: []
+    homeworld: [],
   };
 
   componentDidMount() {
@@ -23,7 +25,7 @@ export default class SpeciesDetails extends Component {
           details: data,
           characters: data.people,
           films: data.films,
-          homeworld: [...this.state.homeworld, data.homeworld]
+          homeworld: [...this.state.homeworld, data.homeworld],
         });
       })
       .catch(error => this.setState({ error }))
@@ -31,7 +33,14 @@ export default class SpeciesDetails extends Component {
   }
 
   render() {
-    const { isLoading, error, details, characters, films, homeworld } = this.state;
+    const {
+      isLoading,
+      error,
+      details,
+      characters,
+      films,
+      homeworld,
+    } = this.state;
     return (
       <div>
         {error && <p>Whoops, something went wrong: {error.message}</p>}
@@ -49,15 +58,19 @@ export default class SpeciesDetails extends Component {
             <p>Eye colors: {details.eye_colors}</p>
             <p>Average lifespan: {details.average_lifespan}</p>
             <p>Language: {details.language}</p>
-            <p>Homeworld: <DataList list={homeworld} /></p>
+            <p>
+              Homeworld: <DataList list={homeworld} />
+            </p>
             {films.length > 0 && (
               <p>
                 Films: <DataList list={films} />
               </p>
             )}
-            {characters.length > 0 && <p>
-              Characters: <DataList list={characters} />
-            </p>}
+            {characters.length > 0 && (
+              <p>
+                Characters: <DataList list={characters} />
+              </p>
+            )}
           </>
         )}
       </div>

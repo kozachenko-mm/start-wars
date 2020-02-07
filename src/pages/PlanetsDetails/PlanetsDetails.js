@@ -1,8 +1,8 @@
-import React, { Component } from "react";
-import Loader from "react-loader-spinner";
-import * as Api from "../../services/api";
-import { getIdFromProps } from "../../services/getIdFromProps";
-import DataList from "../../components/DataList/DataList";
+import React, { Component } from 'react';
+import Loader from 'react-loader-spinner';
+import * as Api from '../../services/api';
+import { getIdFromProps } from '../../services/getIdFromProps';
+import DataList from '../../components/DataList/DataList';
 
 export default class PlanetsDetails extends Component {
   state = {
@@ -10,8 +10,9 @@ export default class PlanetsDetails extends Component {
     error: null,
     isLoading: false,
     films: [],
-    residents: []
+    residents: [],
   };
+
   componentDidMount() {
     this.setState({ isLoading: true });
     const id = getIdFromProps(this.props);
@@ -20,12 +21,13 @@ export default class PlanetsDetails extends Component {
         this.setState({
           details: data,
           films: data.films,
-          residents: data.residents
+          residents: data.residents,
         });
       })
       .catch(error => this.setState({ error }))
       .finally(() => this.setState({ isLoading: false }));
   }
+
   render() {
     const { isLoading, error, details, films, residents } = this.state;
     return (

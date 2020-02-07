@@ -1,8 +1,10 @@
-import React, { Component } from "react";
-import Loader from "react-loader-spinner";
-import * as Api from "../../services/api";
-import { getIdFromProps } from "../../services/getIdFromProps";
-import DataList from "../../components/DataList/DataList";
+/* eslint-disable react/no-access-state-in-setstate */
+/* eslint-disable react/destructuring-assignment */
+import React, { Component } from 'react';
+import Loader from 'react-loader-spinner';
+import * as Api from '../../services/api';
+import { getIdFromProps } from '../../services/getIdFromProps';
+import DataList from '../../components/DataList/DataList';
 
 export default class PeopleDetails extends Component {
   state = {
@@ -13,8 +15,9 @@ export default class PeopleDetails extends Component {
     species: [],
     starships: [],
     vehicles: [],
-    homeworld:[]
+    homeworld: [],
   };
+
   componentDidMount() {
     this.setState({ isLoading: true });
     const id = getIdFromProps(this.props);
@@ -26,12 +29,13 @@ export default class PeopleDetails extends Component {
           species: data.species,
           starships: data.starships,
           vehicles: data.vehicles,
-          homeworld: [...this.state.homeworld, data.homeworld]
+          homeworld: [...this.state.homeworld, data.homeworld],
         });
       })
       .catch(error => this.setState({ error }))
       .finally(() => this.setState({ isLoading: false }));
   }
+
   render() {
     const {
       isLoading,
@@ -41,7 +45,7 @@ export default class PeopleDetails extends Component {
       species,
       starships,
       vehicles,
-      homeworld
+      homeworld,
     } = this.state;
     return (
       <div>
@@ -59,7 +63,9 @@ export default class PeopleDetails extends Component {
             <p>Eye color: {details.eye_color}</p>
             <p>Birth year: {details.birth_year}</p>
             <p>Gender: {details.gender}</p>
-            <p>Homeworld: <DataList list={homeworld} /></p>
+            <p>
+              Homeworld: <DataList list={homeworld} />
+            </p>
             {films.length > 0 && (
               <p>
                 Films: <DataList list={films} />

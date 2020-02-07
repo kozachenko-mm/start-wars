@@ -1,24 +1,25 @@
-import React, { Component } from "react";
-import PropTypes from "prop-types";
-import styles from "./Search.module.css";
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import styles from './Search.module.css';
 
 export default class Search extends Component {
   static propTypes = {
-    onSearch: PropTypes.func.isRequired
+    onSearch: PropTypes.func.isRequired,
+    placelolder: PropTypes.string.isRequired,
   };
 
   state = {
-    inputValue: ""
+    inputValue: '',
   };
 
-  handleChange =  ({ target }) => {
+  handleChange = ({ target }) => {
     this.props.onSearch(target.value);
     this.setState({ inputValue: target.value });
   };
 
   render() {
     const { inputValue } = this.state;
-    const {placelolder } = this.props;
+    const { placelolder } = this.props;
     return (
       <input
         className={styles.input}

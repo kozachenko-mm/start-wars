@@ -1,8 +1,8 @@
-import React, { Component } from "react";
-import Loader from "react-loader-spinner";
-import * as Api from "../../services/api";
-import { getIdFromProps } from "../../services/getIdFromProps";
-import DataList from "../../components/DataList/DataList";
+import React, { Component } from 'react';
+import Loader from 'react-loader-spinner';
+import * as Api from '../../services/api';
+import { getIdFromProps } from '../../services/getIdFromProps';
+import DataList from '../../components/DataList/DataList';
 
 export default class VehiclesDetails extends Component {
   state = {
@@ -10,7 +10,7 @@ export default class VehiclesDetails extends Component {
     error: null,
     isLoading: false,
     characters: [],
-    films: []
+    films: [],
   };
 
   componentDidMount() {
@@ -21,7 +21,7 @@ export default class VehiclesDetails extends Component {
         this.setState({
           details: data,
           characters: data.pilots,
-          films: data.films
+          films: data.films,
         });
       })
       .catch(error => this.setState({ error }))

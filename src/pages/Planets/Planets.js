@@ -1,19 +1,25 @@
-import React, { Component } from "react";
-import Loader from "react-loader-spinner";
-import * as Api from "../../services/api";
-import { Link } from "react-router-dom";
-import Search from "../../components/Search/Search";
-import BtnLoadMore from "../../components/BtnLoadMore/BtnLoadMore";
-import style from './Planets.module.css'
-
+/* eslint-disable react/no-access-state-in-setstate */
+import React, { Component } from 'react';
+import Loader from 'react-loader-spinner';
+import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import * as Api from '../../services/api';
+import Search from '../../components/Search/Search';
+import BtnLoadMore from '../../components/BtnLoadMore/BtnLoadMore';
+import style from './Planets.module.css';
 
 export default class Planets extends Component {
+  static propTypes = {
+    location: PropTypes.objectOf(PropTypes.string).isRequired,
+  };
+
   state = {
     planets: [],
     error: null,
     isLoading: false,
-    page: 1
+    page: 1,
   };
+
   componentDidMount() {
     const { page } = this.state;
     this.setState({ isLoading: true });
@@ -27,7 +33,7 @@ export default class Planets extends Component {
 
   componentWillUnmount() {
     const { page } = this.state;
-    Api.getPlanets(page)
+    Api.getPlanets(page);
   }
 
   onSearch = query => {
@@ -43,7 +49,7 @@ export default class Planets extends Component {
 
   onLoadMore = () => {
     const { page } = this.state;
-    this.setState({ page: this.state.page + 1 });
+    this.setState(prevState => ({ page: prevState.page + 1 }));
     Api.getPeople(page + 1)
       .then(({ data }) => {
         this.setState({ planets: [...this.state.planets, ...data.results] });
@@ -63,7 +69,7 @@ export default class Planets extends Component {
     });
     return (
       <div>
-        <Search onSearch={this.onSearch} placelolder={"Search planets... "} />
+        <Search onSearch={this.onSearch} placelolder="Search planets... " />
         {error && <p>Whoops, something went wrong: {error.message}</p>}
         {isLoading && (
           <Loader type="ThreeDots" color="#00BFFF" height={50} width={50} />
@@ -74,7 +80,7 @@ export default class Planets extends Component {
               <li className={style.item} key={item.created}>
                 <Link
                   to={{
-                    pathname: `/planets/${item.url.split("/").reverse()[1]}`
+                    pathname: `/planets/${item.url.split('/').reverse()[1]}`,
                   }}
                 >
                   {item.name}
