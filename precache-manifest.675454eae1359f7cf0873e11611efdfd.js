@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "57a623299003620b422387b19b1b1447",
+    "revision": "a6fde6fe447272eb275dfc0cf19aa155",
     "url": "/start-wars/index.html"
   },
   {
-    "revision": "57cbe979bbf452158c05",
+    "revision": "0f9e85653ffeb2340d29",
     "url": "/start-wars/static/css/main.4eb1e247.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/start-wars/static/js/2.cab9a0d7.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "57cbe979bbf452158c05",
-    "url": "/start-wars/static/js/main.5a70b71b.chunk.js"
+    "revision": "0f9e85653ffeb2340d29",
+    "url": "/start-wars/static/js/main.c47d2000.chunk.js"
   },
   {
     "revision": "0a006e66e50bd97f90fa",

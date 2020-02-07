@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/start-wars/static/css/main.4eb1e247.chunk.css",
-    "main.js": "/start-wars/static/js/main.5a70b71b.chunk.js",
-    "main.js.map": "/start-wars/static/js/main.5a70b71b.chunk.js.map",
+    "main.js": "/start-wars/static/js/main.c47d2000.chunk.js",
+    "main.js.map": "/start-wars/static/js/main.c47d2000.chunk.js.map",
     "runtime-main.js": "/start-wars/static/js/runtime-main.6047ff9b.js",
     "runtime-main.js.map": "/start-wars/static/js/runtime-main.6047ff9b.js.map",
     "static/js/2.cab9a0d7.chunk.js": "/start-wars/static/js/2.cab9a0d7.chunk.js",
     "static/js/2.cab9a0d7.chunk.js.map": "/start-wars/static/js/2.cab9a0d7.chunk.js.map",
     "index.html": "/start-wars/index.html",
-    "precache-manifest.6c218ae935ed46c67b43f08cc50a5fcc.js": "/start-wars/precache-manifest.6c218ae935ed46c67b43f08cc50a5fcc.js",
+    "precache-manifest.675454eae1359f7cf0873e11611efdfd.js": "/start-wars/precache-manifest.675454eae1359f7cf0873e11611efdfd.js",
     "service-worker.js": "/start-wars/service-worker.js",
     "static/css/main.4eb1e247.chunk.css.map": "/start-wars/static/css/main.4eb1e247.chunk.css.map",
     "static/js/2.cab9a0d7.chunk.js.LICENSE.txt": "/start-wars/static/js/2.cab9a0d7.chunk.js.LICENSE.txt",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.6047ff9b.js",
     "static/js/2.cab9a0d7.chunk.js",
     "static/css/main.4eb1e247.chunk.css",
-    "static/js/main.5a70b71b.chunk.js"
+    "static/js/main.c47d2000.chunk.js"
   ]
 }
